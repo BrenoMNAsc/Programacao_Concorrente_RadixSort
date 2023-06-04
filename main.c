@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <omp.h>
+#include "./RadixSortSequencial.c"
+#include "./RadixSortOpenMP.c"
 #define SIZE 100000000
+double TIME_I, TIME_F;
 
 void popular(long int* array, long int size) {
     srand(time(NULL));
@@ -10,57 +14,6 @@ void popular(long int* array, long int size) {
         array[i] = rand() % size + 1;
     }
 }
-
-long int getMax(long int* a, long int n) {
-    long int max = a[0];
-    for (long int i = 1; i < n; i++) {
-        if (a[i] > max)
-            max = a[i];
-    }
-    return max;
-}
-
-void countingSort(long int* a, long int n, long int place)
-{
-    long int* output = (long int*)malloc(n * sizeof(long int));
-    long int count[10] = {0};
-
-    // Contagem da ocorrência de cada dígito
-    for (long int i = 0; i < n; i++)
-        count[(a[i] / place) % 10]++;
-
-    // Cálculo da frequência acumulada
-    for (long int i = 1; i < 10; i++)
-        count[i] += count[i - 1];
-
-    // Ordenação dos elementos com base no lugar atual
-    for (long int i = n - 1; i >= 0; i--) {
-        output[count[(a[i] / place) % 10] - 1] = a[i];
-        count[(a[i] / place) % 10]--;
-    }
-
-    // Copia os elementos ordenados de volta para o array original
-    for (long int i = 0; i < n; i++)
-        a[i] = output[i];
-
-    free(output);
-}
-
-void radixsort(long int* a, long int n) {
-    long int max = getMax(a, n);
-
-    // Realiza a ordenação para cada lugar (unidades, dezenas, centenas, etc.)
-    for (long int place = 1; max / place > 0; place *= 10)
-        countingSort(a, n, place);
-}
-
-void printArray(long int* a, long int n) {
-    for (long int i = 0; i < n; ++i) {
-        printf("%ld  ", a[i]);
-    }
-    printf("\n");
-}
-
 int main() {
     long int* a = (long int*)malloc(SIZE * sizeof(long int));
     if (a == NULL) {
@@ -69,7 +22,14 @@ int main() {
     }
 
     popular(a, SIZE); // Preenche o array com números aleatórios
-    radixsort(a, SIZE); // Ordena o array usando o algoritmo Radix Sort
+    TIME_I = omp_get_wtime();
+    RadixSort_Sequencial(a, SIZE); // Ordena o array usando o algoritmo Radix Sort
+    TIME_F = omp_get_wtime();
+    printf("Sequencial %fs \n", TIME_F - TIME_I);
+    TIME_I = omp_get_wtime();
+    RadixSortOpenMP(SIZE, a); // Ordena o array usando o algoritmo Radix Sort
+    TIME_F = omp_get_wtime();
+    printf("Paralelo %fs \n", TIME_F - TIME_I);
     // printArray(a, SIZE); // Imprime o array ordenado
 
     free(a); // Libera a memória alocada para o array

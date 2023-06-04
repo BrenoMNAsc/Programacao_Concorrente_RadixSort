@@ -55,6 +55,18 @@ build CMakeFiles/ConcorrenteTrabalho.dir/main.c.obj: C_COMPILER__ConcorrenteTrab
   OBJECT_DIR = CMakeFiles\ConcorrenteTrabalho.dir
   OBJECT_FILE_DIR = CMakeFiles\ConcorrenteTrabalho.dir
 
+build CMakeFiles/ConcorrenteTrabalho.dir/RadixSortSequencial.c.obj: C_COMPILER__ConcorrenteTrabalho_Debug C$:/Users/mari$ oliveira/CLionProjects/ConcorrenteTrabalho/RadixSortSequencial.c || cmake_object_order_depends_target_ConcorrenteTrabalho
+  DEP_FILE = CMakeFiles\ConcorrenteTrabalho.dir\RadixSortSequencial.c.obj.d
+  FLAGS = -fopenmp -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\ConcorrenteTrabalho.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConcorrenteTrabalho.dir
+
+build CMakeFiles/ConcorrenteTrabalho.dir/RadixSortOpenMP.c.obj: C_COMPILER__ConcorrenteTrabalho_Debug C$:/Users/mari$ oliveira/CLionProjects/ConcorrenteTrabalho/RadixSortOpenMP.c || cmake_object_order_depends_target_ConcorrenteTrabalho
+  DEP_FILE = CMakeFiles\ConcorrenteTrabalho.dir\RadixSortOpenMP.c.obj.d
+  FLAGS = -fopenmp -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\ConcorrenteTrabalho.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConcorrenteTrabalho.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target ConcorrenteTrabalho
@@ -63,7 +75,7 @@ build CMakeFiles/ConcorrenteTrabalho.dir/main.c.obj: C_COMPILER__ConcorrenteTrab
 #############################################
 # Link the static library libConcorrenteTrabalho.a
 
-build libConcorrenteTrabalho.a: C_STATIC_LIBRARY_LINKER__ConcorrenteTrabalho_Debug CMakeFiles/ConcorrenteTrabalho.dir/main.c.obj
+build libConcorrenteTrabalho.a: C_STATIC_LIBRARY_LINKER__ConcorrenteTrabalho_Debug CMakeFiles/ConcorrenteTrabalho.dir/main.c.obj CMakeFiles/ConcorrenteTrabalho.dir/RadixSortSequencial.c.obj CMakeFiles/ConcorrenteTrabalho.dir/RadixSortOpenMP.c.obj
   LANGUAGE_COMPILE_FLAGS = -fopenmp -g
   OBJECT_DIR = CMakeFiles\ConcorrenteTrabalho.dir
   POST_BUILD = cd .
