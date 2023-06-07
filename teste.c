@@ -17,6 +17,7 @@ void popular(long int* array, long int size) {
     }
 }
 int main() {
+    //for(int i = 0; i < 10; i++){
     long int* a = (long int*)malloc(SIZE * sizeof(long int));
     if (a == NULL) {
         printf("Falha na alocação de memória.\n");
@@ -30,37 +31,17 @@ int main() {
     
     popular(a, SIZE); // Preenche o array com números aleatórios
     popular(b, SIZE); // Preenche o array com números aleatórios
-    for(long int z = SIZE - 1; z> SIZE - 30; z--){
-        printf("%ld,", a[z]);
-
-    }
-    printf("\n \n");
-    for(long int z = SIZE -1; z> SIZE - 30; z--){
-        printf("%ld,", b[z]);
-
-    }
-     printf("\n \n");
     TIME_I = omp_get_wtime();
     RadixSort_Sequencial(a, SIZE); // Ordena o array usando o algoritmo Radix Sort
     TIME_F = omp_get_wtime();
     printf("Sequencial %fs \n", TIME_F - TIME_I);
     TIME_I = omp_get_wtime();
-    RadixSortOpenMP(SIZE, b); // Ordena o array usando o algoritmo Radix Sort
+    RadixSortOpenMPB(SIZE, b); // Ordena o array usando o algoritmo Radix Sort
     TIME_F = omp_get_wtime();
     printf("Paralelo %fs \n", TIME_F - TIME_I);
-     printf("\n \n");
-    // printArray(a, SIZE); // Imprime o array ordenado
 
-    //free(a); // Libera a memória alocada para o array
+    free(a); // Libera a memória alocada para o array
     //free(b); // Libera a memória alocada para o array
-    for(long int z = SIZE - 1 ; z> SIZE - 30; z--){
-        printf("%ld,", a[z]);
-
-    }
-     printf("\n \n");
-    for(long int z = SIZE - 1; z> SIZE - 30; z--){
-        printf("%ld,", b[z]);
-
-    }
+    //}
     return 0;
 }

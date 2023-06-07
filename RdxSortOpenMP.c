@@ -11,7 +11,7 @@ long int getMaxB(long int* a, long int n) {
 }
 
 
-void RadixSortOpenMPB(long int n, long int data[n]) {
+void RadixSortOpenMPB(long int n, long int* data) {
     long int max = getMaxB(data, n);
     long int * buffer = malloc(n*sizeof(long int));
     long int i;
@@ -50,8 +50,17 @@ void RadixSortOpenMPB(long int n, long int data[n]) {
             }
 #pragma omp for schedule(static)
             for(i = 0; i < n; i++) { //note here the end condition
-                buffer[local_bucket[(data[i] / place) % 10]++] = data[i];
+                //printf("i %ld :",i);
+                //printf("n %ld / %ld =",data[i], place);
+                //printf("n %ld ",(data[i] / place) % 10 );
+                //printf("local bucket %ld\n",local_bucket[(data[i] / place) % 10]++);
+                if(data[i] > 0){
+                    buffer[local_bucket[(data[i] / place) % 10]++] = data[i];
+                }
+
+                
             }
+
         }
         //now move data
         long int* tmp = data;
@@ -59,4 +68,8 @@ void RadixSortOpenMPB(long int n, long int data[n]) {
         buffer = tmp;
     }
     free(buffer);
+    for(long int z = n - 1; z > n - 101; z--){
+        printf("%ld,", data[z]);
+    }
+    printf("\n");
 }
