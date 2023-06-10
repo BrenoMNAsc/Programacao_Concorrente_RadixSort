@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "openmp-use-default-none"
 #include "stdio.h"
 #include "stdlib.h"
 #include "omp.h"
@@ -68,8 +70,6 @@ void RadixSortOpenMPB(long int n, long int* data) {
         buffer = tmp;
     }
     free(buffer);
-    for(long int z = n - 1; z > n - 101; z--){
-        printf("%ld,", data[z]);
-    }
-    printf("\n");
+
 }
+#pragma clang diagnostic pop

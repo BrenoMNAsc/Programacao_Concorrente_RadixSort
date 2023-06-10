@@ -1,3 +1,4 @@
-C:/Users/mari oliveira/CLionProjects/ConcorrenteTrabalho/cmake-build-debug/CMakeFiles/ConcorrenteTrabalho.dir
-C:/Users/mari oliveira/CLionProjects/ConcorrenteTrabalho/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/mari oliveira/CLionProjects/ConcorrenteTrabalho/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles/ConcorrenteTrabalho.dir
+/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles/main.c.dir
+/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles/rebuild_cache.dir

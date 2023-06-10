@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmain.c.a CMakeFiles/main.c.dir/RadixSortSequencial.c.o CMakeFiles/main.c.dir/RadixSortOpenMP.c.o CMakeFiles/main.c.dir/teste.c.o CMakeFiles/main.c.dir/RdxSortMPI.c.o
+/usr/bin/ranlib libmain.c.a

@@ -32,16 +32,18 @@ int main() {
     popular(a, SIZE); // Preenche o array com números aleatórios
     popular(b, SIZE); // Preenche o array com números aleatórios
     TIME_I = omp_get_wtime();
-    RadixSort_Sequencial(a, SIZE); // Ordena o array usando o algoritmo Radix Sort
+    //RadixSort_Sequencial(a, SIZE); // Ordena o array usando o algoritmo Radix Sort
     TIME_F = omp_get_wtime();
     printf("Sequencial %fs \n", TIME_F - TIME_I);
     TIME_I = omp_get_wtime();
     RadixSortOpenMPB(SIZE, b); // Ordena o array usando o algoritmo Radix Sort
     TIME_F = omp_get_wtime();
     printf("Paralelo %fs \n", TIME_F - TIME_I);
-
-    free(a); // Libera a memória alocada para o array
+//    for(long int z = SIZE - 100;  z < SIZE; z++){
+//        printf("%ld,", b[z]);
+//    }
+    printf("\n");
+    //free(a); // Libera a memória alocada para o array
     //free(b); // Libera a memória alocada para o array
-    //}
     return 0;
 }
