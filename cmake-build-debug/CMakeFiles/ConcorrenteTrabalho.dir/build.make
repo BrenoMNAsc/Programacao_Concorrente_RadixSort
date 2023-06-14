@@ -83,10 +83,24 @@ CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortMPI.c" -o CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.s
 
+CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o: CMakeFiles/ConcorrenteTrabalho.dir/flags.make
+CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o: /home/brieno/Faculdade/2022.2/PROGRAMAÇÃO\ CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortOpenMP.c
+CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o: CMakeFiles/ConcorrenteTrabalho.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o -MF CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o.d -o CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o -c "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortOpenMP.c"
+
+CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortOpenMP.c" > CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.i
+
+CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortOpenMP.c" -o CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.s
+
 CMakeFiles/ConcorrenteTrabalho.dir/main.c.o: CMakeFiles/ConcorrenteTrabalho.dir/flags.make
 CMakeFiles/ConcorrenteTrabalho.dir/main.c.o: /home/brieno/Faculdade/2022.2/PROGRAMAÇÃO\ CONCORRENTE/Programacao_Concorrente_RadixSort/main.c
 CMakeFiles/ConcorrenteTrabalho.dir/main.c.o: CMakeFiles/ConcorrenteTrabalho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ConcorrenteTrabalho.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ConcorrenteTrabalho.dir/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ConcorrenteTrabalho.dir/main.c.o -MF CMakeFiles/ConcorrenteTrabalho.dir/main.c.o.d -o CMakeFiles/ConcorrenteTrabalho.dir/main.c.o -c "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/main.c"
 
 CMakeFiles/ConcorrenteTrabalho.dir/main.c.i: cmake_force
@@ -100,16 +114,18 @@ CMakeFiles/ConcorrenteTrabalho.dir/main.c.s: cmake_force
 # Object files for target ConcorrenteTrabalho
 ConcorrenteTrabalho_OBJECTS = \
 "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o" \
+"CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o" \
 "CMakeFiles/ConcorrenteTrabalho.dir/main.c.o"
 
 # External object files for target ConcorrenteTrabalho
 ConcorrenteTrabalho_EXTERNAL_OBJECTS =
 
 ConcorrenteTrabalho: CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o
+ConcorrenteTrabalho: CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o
 ConcorrenteTrabalho: CMakeFiles/ConcorrenteTrabalho.dir/main.c.o
 ConcorrenteTrabalho: CMakeFiles/ConcorrenteTrabalho.dir/build.make
 ConcorrenteTrabalho: CMakeFiles/ConcorrenteTrabalho.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ConcorrenteTrabalho"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ConcorrenteTrabalho"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ConcorrenteTrabalho.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

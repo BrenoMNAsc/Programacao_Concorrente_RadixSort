@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRadixSortSequencial.c.a CMakeFiles/RadixSortSequencial.c.dir/RdxSortMPI.c.o
+/usr/bin/ranlib libRadixSortSequencial.c.a

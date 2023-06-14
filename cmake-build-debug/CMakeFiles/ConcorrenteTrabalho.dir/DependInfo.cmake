@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortMPI.c" "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o" "gcc" "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o.d"
+  "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/RdxSortOpenMP.c" "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o" "gcc" "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o.d"
   "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/main.c" "CMakeFiles/ConcorrenteTrabalho.dir/main.c.o" "gcc" "CMakeFiles/ConcorrenteTrabalho.dir/main.c.o.d"
   )
 

@@ -3,8 +3,7 @@
 #include <time.h>
 #include <omp.h>
 #include "./RadixSortSequencial.c"
-#include "./RadixSortOpenMP.c"
-#include "./RdxSortSequencial.c"
+#include "./RdxSortOpenMP.c"
 #define SIZE 100000000
 double TIME_I, TIME_F;
 
@@ -21,21 +20,25 @@ int main() {
         printf("Falha na alocação de memória.\n");
         return 1;
     }
-
+    long int* b = (long int*)malloc(SIZE * sizeof(long int));
+    if (b == NULL) {
+        printf("Falha na alocação de memória.\n");
+        return 1;
+    }
+    
     popular(a, SIZE); // Preenche o array com números aleatórios
+    popular(b, SIZE); // Preenche o array com números aleatórios
+
     TIME_I = omp_get_wtime();
     RadixSort_Sequencial(a, SIZE); // Ordena o array usando o algoritmo Radix Sort
     TIME_F = omp_get_wtime();
     printf("Sequencial %fs \n", TIME_F - TIME_I);
     TIME_I = omp_get_wtime();
-    RadixSortOpenMP(SIZE, a); // Ordena o array usando o algoritmo Radix Sort
+    b = RadixSortOpenMPB(SIZE, b); // Ordena o array usando o algoritmo Radix Sort
     TIME_F = omp_get_wtime();
     printf("Paralelo %fs \n", TIME_F - TIME_I);
-    for(long int z = SIZE - 1 ; z > SIZE - 31; z--){
-        printf("%ld,", a[z]);
-
-    }
-
     free(a); // Libera a memória alocada para o array
+    free(b); // Libera a memória alocada para o array
+
     return 0;
 }

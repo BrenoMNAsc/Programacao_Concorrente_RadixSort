@@ -3,7 +3,7 @@
 #include <mpi.h>
 #include <time.h>
 
-#define SIZE 70000000
+#define SIZE 100000000
 
 void popular(long int* array, long int size) {
     srand(time(NULL));
@@ -67,7 +67,6 @@ int main(int argc, char** argv) {
     MPI_Bcast(&N, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
     int numbersPerProcess = N / P;
-    int remainder = N % P;
 
     localNumbers = (long int*) malloc(numbersPerProcess * sizeof(long int));
     sortedNumbers = (long int*) malloc(N * sizeof(long int));
@@ -79,11 +78,15 @@ int main(int argc, char** argv) {
         popular(numbers, N);
     }
 
-    MPI_Scatter(numbers, numbersPerProcess, MPI_LONG, localNumbers, numbersPerProcess, MPI_LONG, 0, MPI_COMM_WORLD);
+    MPI_Scatter(numbers, numbersPerProcess,
+                MPI_LONG, localNumbers, numbersPerProcess,
+                MPI_LONG, 0, MPI_COMM_WORLD);
 
     localSort(localNumbers, numbersPerProcess);
 
-    MPI_Allgather(localNumbers, numbersPerProcess, MPI_LONG, sortedNumbers, numbersPerProcess, MPI_LONG, MPI_COMM_WORLD);
+    MPI_Allgather(localNumbers, numbersPerProcess,
+                  MPI_LONG, sortedNumbers, numbersPerProcess,
+                  MPI_LONG, MPI_COMM_WORLD);
 
     if (rank == 0) {
         localSort(sortedNumbers, N);

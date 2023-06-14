@@ -130,65 +130,17 @@ ConcorrenteTrabalho/fast:
 .PHONY : ConcorrenteTrabalho/fast
 
 #=============================================================================
-# Target rules for targets named main.c
+# Target rules for targets named RadixSortSequencial.c
 
 # Build rule for target.
-main.c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.c
-.PHONY : main.c
+RadixSortSequencial.c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RadixSortSequencial.c
+.PHONY : RadixSortSequencial.c
 
 # fast build rule for target.
-main.c/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
-.PHONY : main.c/fast
-
-RadixSortOpenMP.o: RadixSortOpenMP.c.o
-.PHONY : RadixSortOpenMP.o
-
-# target to build an object file
-RadixSortOpenMP.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RadixSortOpenMP.c.o
-.PHONY : RadixSortOpenMP.c.o
-
-RadixSortOpenMP.i: RadixSortOpenMP.c.i
-.PHONY : RadixSortOpenMP.i
-
-# target to preprocess a source file
-RadixSortOpenMP.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RadixSortOpenMP.c.i
-.PHONY : RadixSortOpenMP.c.i
-
-RadixSortOpenMP.s: RadixSortOpenMP.c.s
-.PHONY : RadixSortOpenMP.s
-
-# target to generate assembly for a file
-RadixSortOpenMP.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RadixSortOpenMP.c.s
-.PHONY : RadixSortOpenMP.c.s
-
-RadixSortSequencial.o: RadixSortSequencial.c.o
-.PHONY : RadixSortSequencial.o
-
-# target to build an object file
-RadixSortSequencial.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RadixSortSequencial.c.o
-.PHONY : RadixSortSequencial.c.o
-
-RadixSortSequencial.i: RadixSortSequencial.c.i
-.PHONY : RadixSortSequencial.i
-
-# target to preprocess a source file
-RadixSortSequencial.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RadixSortSequencial.c.i
-.PHONY : RadixSortSequencial.c.i
-
-RadixSortSequencial.s: RadixSortSequencial.c.s
-.PHONY : RadixSortSequencial.s
-
-# target to generate assembly for a file
-RadixSortSequencial.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RadixSortSequencial.c.s
-.PHONY : RadixSortSequencial.c.s
+RadixSortSequencial.c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/build
+.PHONY : RadixSortSequencial.c/fast
 
 RdxSortMPI.o: RdxSortMPI.c.o
 .PHONY : RdxSortMPI.o
@@ -196,7 +148,7 @@ RdxSortMPI.o: RdxSortMPI.c.o
 # target to build an object file
 RdxSortMPI.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RdxSortMPI.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/RdxSortMPI.c.o
 .PHONY : RdxSortMPI.c.o
 
 RdxSortMPI.i: RdxSortMPI.c.i
@@ -205,7 +157,7 @@ RdxSortMPI.i: RdxSortMPI.c.i
 # target to preprocess a source file
 RdxSortMPI.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RdxSortMPI.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/RdxSortMPI.c.i
 .PHONY : RdxSortMPI.c.i
 
 RdxSortMPI.s: RdxSortMPI.c.s
@@ -214,8 +166,32 @@ RdxSortMPI.s: RdxSortMPI.c.s
 # target to generate assembly for a file
 RdxSortMPI.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/RdxSortMPI.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/RdxSortMPI.c.s
 .PHONY : RdxSortMPI.c.s
+
+RdxSortOpenMP.o: RdxSortOpenMP.c.o
+.PHONY : RdxSortOpenMP.o
+
+# target to build an object file
+RdxSortOpenMP.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o
+.PHONY : RdxSortOpenMP.c.o
+
+RdxSortOpenMP.i: RdxSortOpenMP.c.i
+.PHONY : RdxSortOpenMP.i
+
+# target to preprocess a source file
+RdxSortOpenMP.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.i
+.PHONY : RdxSortOpenMP.c.i
+
+RdxSortOpenMP.s: RdxSortOpenMP.c.s
+.PHONY : RdxSortOpenMP.s
+
+# target to generate assembly for a file
+RdxSortOpenMP.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.s
+.PHONY : RdxSortOpenMP.c.s
 
 main.o: main.c.o
 .PHONY : main.o
@@ -241,30 +217,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/main.c.s
 .PHONY : main.c.s
 
-teste.o: teste.c.o
-.PHONY : teste.o
-
-# target to build an object file
-teste.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/teste.c.o
-.PHONY : teste.c.o
-
-teste.i: teste.c.i
-.PHONY : teste.i
-
-# target to preprocess a source file
-teste.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/teste.c.i
-.PHONY : teste.c.i
-
-teste.s: teste.c.s
-.PHONY : teste.s
-
-# target to generate assembly for a file
-teste.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/teste.c.s
-.PHONY : teste.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -274,22 +226,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ConcorrenteTrabalho"
-	@echo "... main.c"
-	@echo "... RadixSortOpenMP.o"
-	@echo "... RadixSortOpenMP.i"
-	@echo "... RadixSortOpenMP.s"
-	@echo "... RadixSortSequencial.o"
-	@echo "... RadixSortSequencial.i"
-	@echo "... RadixSortSequencial.s"
+	@echo "... RadixSortSequencial.c"
 	@echo "... RdxSortMPI.o"
 	@echo "... RdxSortMPI.i"
 	@echo "... RdxSortMPI.s"
+	@echo "... RdxSortOpenMP.o"
+	@echo "... RdxSortOpenMP.i"
+	@echo "... RdxSortOpenMP.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... teste.o"
-	@echo "... teste.i"
-	@echo "... teste.s"
 .PHONY : help
 
 

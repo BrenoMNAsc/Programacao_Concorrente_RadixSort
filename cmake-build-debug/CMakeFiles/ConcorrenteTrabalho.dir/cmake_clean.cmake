@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o"
   "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o.d"
+  "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o"
+  "CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o.d"
   "CMakeFiles/ConcorrenteTrabalho.dir/main.c.o"
   "CMakeFiles/ConcorrenteTrabalho.dir/main.c.o.d"
   "ConcorrenteTrabalho"

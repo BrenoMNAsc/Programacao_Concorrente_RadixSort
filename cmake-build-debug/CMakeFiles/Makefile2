@@ -64,7 +64,7 @@ CMAKE_BINARY_DIR = "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Prog
 
 # The main recursive "all" target.
 all: CMakeFiles/ConcorrenteTrabalho.dir/all
-all: CMakeFiles/main.c.dir/all
+all: CMakeFiles/RadixSortSequencial.c.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/ConcorrenteTrabalho.dir/clean
-clean: CMakeFiles/main.c.dir/clean
+clean: CMakeFiles/RadixSortSequencial.c.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,12 +83,12 @@ clean: CMakeFiles/main.c.dir/clean
 CMakeFiles/ConcorrenteTrabalho.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConcorrenteTrabalho.dir/build.make CMakeFiles/ConcorrenteTrabalho.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=1,2,3 "Built target ConcorrenteTrabalho"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4 "Built target ConcorrenteTrabalho"
 .PHONY : CMakeFiles/ConcorrenteTrabalho.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ConcorrenteTrabalho.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ConcorrenteTrabalho.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/ConcorrenteTrabalho.dir/rule
@@ -103,30 +103,30 @@ CMakeFiles/ConcorrenteTrabalho.dir/clean:
 .PHONY : CMakeFiles/ConcorrenteTrabalho.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.c.dir
+# Target rules for target CMakeFiles/RadixSortSequencial.c.dir
 
 # All Build rule for target.
-CMakeFiles/main.c.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=4,5,6,7,8 "Built target main.c"
-.PHONY : CMakeFiles/main.c.dir/all
+CMakeFiles/RadixSortSequencial.c.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target RadixSortSequencial.c"
+.PHONY : CMakeFiles/RadixSortSequencial.c.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.c.dir/all
+CMakeFiles/RadixSortSequencial.c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RadixSortSequencial.c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brieno/Faculdade/2022.2/PROGRAMAÇÃO CONCORRENTE/Programacao_Concorrente_RadixSort/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/main.c.dir/rule
+.PHONY : CMakeFiles/RadixSortSequencial.c.dir/rule
 
 # Convenience name for target.
-main.c: CMakeFiles/main.c.dir/rule
-.PHONY : main.c
+RadixSortSequencial.c: CMakeFiles/RadixSortSequencial.c.dir/rule
+.PHONY : RadixSortSequencial.c
 
 # clean rule for target.
-CMakeFiles/main.c.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/clean
-.PHONY : CMakeFiles/main.c.dir/clean
+CMakeFiles/RadixSortSequencial.c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RadixSortSequencial.c.dir/build.make CMakeFiles/RadixSortSequencial.c.dir/clean
+.PHONY : CMakeFiles/RadixSortSequencial.c.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

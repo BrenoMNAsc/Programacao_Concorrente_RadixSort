@@ -13,7 +13,7 @@ long int getMaxB(long int* a, long int n) {
 }
 
 
-void RadixSortOpenMPB(long int n, long int* data) {
+long int * RadixSortOpenMPB(long int n, long int data[n]) {
     long int max = getMaxB(data, n);
     long int * buffer = malloc(n*sizeof(long int));
     long int i;
@@ -45,17 +45,13 @@ void RadixSortOpenMPB(long int n, long int* data) {
                         bucket[i] -= local_bucket[i];
                         local_bucket[i] = bucket[i];
                     }
-                } else { //just do barrier
+                } else {
 #pragma omp barrier
                 }
 
             }
 #pragma omp for schedule(static)
-            for(i = 0; i < n; i++) { //note here the end condition
-                //printf("i %ld :",i);
-                //printf("n %ld / %ld =",data[i], place);
-                //printf("n %ld ",(data[i] / place) % 10 );
-                //printf("local bucket %ld\n",local_bucket[(data[i] / place) % 10]++);
+            for(i = 0; i < n; i++) {
                 if(data[i] > 0){
                     buffer[local_bucket[(data[i] / place) % 10]++] = data[i];
                 }
@@ -64,12 +60,12 @@ void RadixSortOpenMPB(long int n, long int* data) {
             }
 
         }
-        //now move data
         long int* tmp = data;
         data = buffer;
         buffer = tmp;
     }
-    free(buffer);
 
+    free(buffer);
+    return data;
 }
 #pragma clang diagnostic pop

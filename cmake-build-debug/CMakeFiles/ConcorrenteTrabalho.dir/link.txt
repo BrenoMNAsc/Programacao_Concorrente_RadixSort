@@ -1,1 +1,1 @@
-/usr/bin/cc  -fopenmp -g CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o CMakeFiles/ConcorrenteTrabalho.dir/main.c.o -o ConcorrenteTrabalho 
+/usr/bin/cc  -fopenmp -g CMakeFiles/ConcorrenteTrabalho.dir/RdxSortMPI.c.o CMakeFiles/ConcorrenteTrabalho.dir/RdxSortOpenMP.c.o CMakeFiles/ConcorrenteTrabalho.dir/main.c.o -o ConcorrenteTrabalho 
